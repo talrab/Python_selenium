@@ -26,7 +26,7 @@ nice_search_region.click()
 nice_search_region = driver_nice.find_element_by_xpath("//div[contains(@id, 'select2-result-label-10')]")
 nice_search_region.click()
 nice_go_button = driver_nice.find_element_by_xpath("//a[contains(@class, 'goBtn button green')]")
-#this is a workaround because of the following exceptions - unknown error: Element is not clickable at point
+#this is a workaround because of the following exceptions - unknown error: Element is not clickable at point...
 driver_nice.execute_script("arguments[0].click();", nice_go_button)
 
 
