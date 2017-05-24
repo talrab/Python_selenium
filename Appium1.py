@@ -1,6 +1,6 @@
 ###############################################################
-#
-#
+# simple unittests which uses Appium against the emulator
+# Make sure you first execute the Appium server and then launch the emulator device
 ###############################################################
 
 #from selenium import webdriver
