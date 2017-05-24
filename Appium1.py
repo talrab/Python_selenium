@@ -1,10 +1,11 @@
 ###############################################################
 # simple unittests which uses Appium against the emulator
 # Make sure you first execute the Appium server and then launch the emulator device
+# This code followed the example in https://qxf2.com/blog/appium-mobile-automation/
 ###############################################################
 
 #from selenium import webdriver
-from appium import webdriver
+from appium import webdriver  # to get the appium python client I used "pip install Appium-Python-Client"
 import unittest
 
 
