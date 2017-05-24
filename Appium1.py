@@ -30,6 +30,8 @@ class CalcAndroidTests(unittest.TestCase):
         self.driver.find_element_by_name("7").click()
         self.driver.find_element_by_name("+").click()
         self.driver.find_element_by_id("digit_8").click()
+        formula_element = self.driver.find_element_by_id("formula")
+        self.assertEqual('7+8', formula_element.text)
         result_element = self.driver.find_element_by_id("result")
         self.assertEqual('15',result_element.text)
 
@@ -38,6 +40,8 @@ class CalcAndroidTests(unittest.TestCase):
         self.driver.find_element_by_name("9").click()
         self.driver.find_element_by_id("op_sub").click()
         self.driver.find_element_by_id("digit_6").click()
+        formula_element = self.driver.find_element_by_id("formula")
+        self.assertEqual('9−6', formula_element.text)
         result_element = self.driver.find_element_by_id("result")
         self.assertEqual('3',result_element.text)
 
