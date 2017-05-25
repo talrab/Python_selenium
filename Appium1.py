@@ -6,7 +6,8 @@
 
 #from selenium import webdriver
 from appium import webdriver  # to get the appium python client I used "pip install Appium-Python-Client"
-import unittest
+import unittest  # It is also a good example for using unittest module in python
+import time
 
 
 class CalcAndroidTests(unittest.TestCase):
@@ -26,8 +27,11 @@ class CalcAndroidTests(unittest.TestCase):
         "Tear down the test"
         self.driver.quit()
 
+    # each function which starts with a 'test' and belongs to a
+    # class which derives from unittest.TestCase is regarded as a 'test case'
     def test_addition(self):
         "Test a simple add calculation"
+        time.sleep(1) # added this sleep in order to let the activity full load
         self.driver.find_element_by_name("7").click()
         self.driver.find_element_by_name("+").click()
         self.driver.find_element_by_id("digit_8").click()
@@ -38,6 +42,7 @@ class CalcAndroidTests(unittest.TestCase):
 
     def test_subtraction(self):
         "Test a simple subtraction calculation"
+        time.sleep(1) # added this sleep in order to let the activity full load
         self.driver.find_element_by_name("9").click()
         self.driver.find_element_by_id("op_sub").click()
         self.driver.find_element_by_id("digit_6").click()
