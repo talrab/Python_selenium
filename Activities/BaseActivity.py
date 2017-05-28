@@ -5,5 +5,7 @@ class BaseActivity:
         self.driver = driver
 
     def find_element_by_locator(self, locator):
-        return self.driver.find_element(locator[0], locator[1])
+        locator_type, locator_name = locator.split("=")
+        return self.driver.find_element(locator_type, locator_name)
+
 
