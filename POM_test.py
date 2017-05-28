@@ -40,7 +40,6 @@ class testsSuite(unittest.TestCase):
 
     def test_addition(self):
         "Test a simple add calculation"
-        #time.sleep(1)  # added this sleep in order to let the activity full load
         firstActivity = FirstActivity(self.driver)
         firstActivity.num_digit('7').click()
         firstActivity.math_operand('+').click()
@@ -52,7 +51,6 @@ class testsSuite(unittest.TestCase):
 
     def test_multiplication(self):
         "Test a simple multiplication calculation"
-        #time.sleep(1)  # added this sleep in order to let the activity full load
         firstActivity = FirstActivity(self.driver)
         firstActivity.num_digit('7').click()
         firstActivity.math_operand('*').click()
@@ -64,7 +62,6 @@ class testsSuite(unittest.TestCase):
 
     def test_division(self):
         "Test a simple division calculation"
-        #time.sleep(1)  # added this sleep in order to let the activity full load
         firstActivity = FirstActivity(self.driver)
         firstActivity.num_digit('8').click()
         firstActivity.math_operand('/').click()
